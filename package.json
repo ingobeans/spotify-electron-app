@@ -1,0 +1,26 @@
+{
+  "name": "spotify-electron-app",
+  "version": "1.0.0",
+  "description": "Electron app that just navigates to spotify",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "build": "electron-builder --linux --x64 --publish never --build-from-source"
+  },
+  "build": {
+    "appId": "com.ingobeans.spotifythingy",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  },
+  "author": "ingobeans",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "github:castlabs/electron-releases#v33.0.0+wvcus",
+    "electron-builder": "^25.1.8"
+  }
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Spotify (Electron)
+Path=~/projects/spotify-electron-app
+Exec=npm start
+Icon=~/projects/spotify-electron-app/icon.png
+Terminal=false
+Type=Application
+Categories=Utility;
