@@ -37,6 +37,7 @@ function createWindow() {
       contextIsolation: true,
       sandbox: true,
     },
+    title: "Spotify",
     frame: false,
     titleBarStyle: "hidden",
   });
@@ -53,6 +54,10 @@ function createWindow() {
     if (navigationHistory.canGoBack()) {
       navigationHistory.goBack();
     }
+  });
+
+  win.on("page-title-updated", (event) => {
+    event.preventDefault();
   });
 
   win.webContents.on("did-frame-finish-load", () => {
